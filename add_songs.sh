@@ -22,7 +22,7 @@ genre=$(cmus-remote -C "format_print %{genre}")
 
 TITLE=`echo $track | tr -d -c '[:alnum:] '`
 BAND=`echo $artist | tr -d -c '[:alnum:] '`
-echo $TITLE ";" $BAND >> playlistbuiltup.txt
+echo $BAND ";" $TITLE >> playlistbuiltup.txt
 
 printf "\033c"
 echo ""

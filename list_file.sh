@@ -12,6 +12,8 @@
 #		  `n` is the size of the playlist.
 #==============================================================================
 
+#set -x
+#trap read debug
 
 # ----------------------------------------------------------------------------
 # Setup and input variables --------------------------------------------------
@@ -207,6 +209,7 @@ done
 # Display summary, remove auxiliar files and create playlist -----------------
 # ----------------------------------------------------------------------------
 
+cat /dev/null > ~/.cmus/playlist.pl
 set -f; IFS=
 myExistingSimilar=(${myExistingSimilar[@]})
 echo  ${#myExistingSimilar[@]} found, $no not
